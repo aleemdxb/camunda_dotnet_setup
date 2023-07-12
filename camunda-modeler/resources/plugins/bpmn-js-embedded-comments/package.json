@@ -1,0 +1,53 @@
+{
+  "name": "bpmn-js-embedded-comments",
+  "version": "0.7.0",
+  "description": "A simple comments extension for bpmn-js",
+  "scripts": {
+    "all": "run-s lint test bundle",
+    "lint": "eslint .",
+    "dev": "npm test -- --auto-watch --no-single-run",
+    "test": "karma start",
+    "bundle": "microbundle build --no-compress --name BpmnJSEmbeddedComments",
+    "prepublishOnly": "run-s bundle"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "umd:main": "dist/bpmn-js-embedded-comments.umd.js",
+  "source": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bpmn-io/bpmn-js-embedded-comments"
+  },
+  "keywords": [
+    "bpmn-js",
+    "bpmn-js-plugin"
+  ],
+  "author": "bpmn.io",
+  "license": "MIT",
+  "devDependencies": {
+    "bpmn-js": "^10.2.1",
+    "chai": "^4.3.6",
+    "eslint": "^8.27.0",
+    "eslint-plugin-bpmn-io": "^0.16.0",
+    "karma": "^6.4.1",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-mocha": "^2.0.1",
+    "karma-sinon-chai": "^2.0.2",
+    "karma-webpack": "^5.0.0",
+    "microbundle": "^0.15.1",
+    "mocha": "^10.1.0",
+    "mocha-test-container-support": "^0.2.0",
+    "npm-run-all": "^4.1.5",
+    "puppeteer": "^19.2.2",
+    "sinon": "^9.2.4",
+    "sinon-chai": "^3.7.0",
+    "webpack": "^5.74.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.1"
+  },
+  "files": [
+    "dist",
+    "assets"
+  ]
+}
